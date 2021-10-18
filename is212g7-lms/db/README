@@ -1,0 +1,23 @@
+IMPORTANT!
+Import the following tables in order:
+Users - course -qualifiedtrainers-class-quiz-trainingmaterial-sectioninfo-enrolment-prerequisites
+
+When importing course : input
+CourseTitle, CourseDescription
+ into column names. Also check if the first entry starts with Fundamentals instead of ndamentals. If not starting with Fundamentals, edit the field so that it correct.
+
+When importing class : input
+CourseID,ClassTitle,TrainerUID,TotalSlots,OccupiedSlots,ClassStartDateTime,ClassEndDateTime,SelfEnrollmentStarDate,SelfEnrollmentEndDate
+ into column names.
+
+When importing trainingmaterial: input
+TMArray,ClassID,SectionNo,DisplayOrder
+ into column names.
+
+When importing quiz: input
+CourseID,CreatedBy,QuizTitle,QuizDescription,Duration,QuizArray,FinalQuiz
+ into column names.
+
+When importing enrolment: input
+CourseID,Username,ClassID,DateOfEnrollment,Category,Status
+ into column names.

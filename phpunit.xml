@@ -6,13 +6,19 @@
         </testsuite>
     </testsuites>
 
+    <coverage>
+        <report>
+            <html outputDirectory="coverage" lowUpperBound="50" highLowerBound="90"/>
+            <crap4j outputFile="build/logs/crap4j.xml"/>
+            <clover outputFile="build/logs/clover.xml"/>
+        </report>
+    </coverage>
+
     <logging>
 <!--        <log type="coverage-html" target="build/coverage"/>-->
-        <html outputDirectory="build/coverage/"/>
+<!--        <html outputDirectory="build/coverage/"/>-->
 <!--        <log type="coverage-crap4j" target="build/logs/crap4j.xml"/>-->
-        <crap4j outputFile="build/logs/crap4j.xml"/>
 <!--        <log type="coverage-clover" target="build/logs/clover.xml"/>-->
-        <clover outputFile="build/logs/clover.xml"/>
 <!--        <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>-->
         <junit outputFile="build/logs/junit.xml"/>
     </logging>

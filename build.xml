@@ -23,7 +23,7 @@
     </target>
 
     <!--              TEST              -->
-    <target name="TEST" depends="prepare,Lint,PHPUnit" description="Run tests" />
+    <target name="TEST" depends="prepare,Lint" description="Run tests" />
 
     <target name="Lint" description="Lint check (syntax error check)">
         <apply executable="php" failonerror="true">

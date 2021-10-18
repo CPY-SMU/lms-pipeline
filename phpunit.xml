@@ -7,9 +7,13 @@
     </testsuites>
 
     <logging>
-        <log type="coverage-html" target="build/coverage"/>
-        <log type="coverage-crap4j" target="build/logs/crap4j.xml"/>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-        <junit outputFile="" logIncompleteSkipped="false"/>
+<!--        <log type="coverage-html" target="build/coverage"/>-->
+        <html outputDirectory="build/coverage/"/>
+<!--        <log type="coverage-crap4j" target="build/logs/crap4j.xml"/>-->
+        <crap4j outputFile="build/logs/crap4j.xml"/>
+<!--        <log type="coverage-clover" target="build/logs/clover.xml"/>-->
+        <clover outputFile="build/logs/clover.xml"/>
+<!--        <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>-->
+        <junit outputFile="build/logs/junit.xml"/>
     </logging>
 </phpunit>

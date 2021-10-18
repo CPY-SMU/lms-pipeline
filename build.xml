@@ -39,9 +39,9 @@
         </apply>
     </target>
 
-    <target name="PHPUnit" description="Run PHPUnit unit tests">
-        <exec executable="phpunit" failonerror="false" />
-    </target>
+<!--    <target name="PHPUnit" description="Run PHPUnit unit tests">-->
+<!--        <exec executable="phpunit" failonerror="false" />-->
+<!--    </target>-->
 
     <!--            REPORTS             -->
     <target name="REPORT" depends="TEST,phploc,phpcs,pdepend,phpmd,phpcpd,phpdox" />

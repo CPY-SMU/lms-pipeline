@@ -29,13 +29,13 @@ class Enrolment
     }
 
     public function getCourseid() {
-        return $this->courseid;
+        return $this->CourseID;
     }
     public function getCourseTitle() {
-        return $this->coursetitle;
+        return $this->CourseTitle;
     }
     public function getCourseDescription() {
-        return $this->coursedescription;
+        return $this->CourseDescription;
     }
 }
 

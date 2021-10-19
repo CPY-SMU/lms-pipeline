@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
-             bootstrap="tests"
-             cacheResultFile=".phpunit.cache/test-results"
-             executionOrder="depends,defects"
-             forceCoversAnnotation="true"
-             beStrictAboutCoversAnnotation="true"
-             beStrictAboutOutputDuringTests="true"
-             beStrictAboutTodoAnnotatedTests="true"
-             convertDeprecationsToExceptions="true"
-             failOnRisky="true"
-             failOnWarning="true"
-             verbose="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         convertDeprecationsToExceptions="true"
+         colors="true"
+         verbose="true"
+         cacheDirectory=".phpunit.cache"
+         failOnRisky="true"
+         failOnWarning="true">
     <testsuites>
-        <testsuite name="default">
-            <directory>tests</directory>
+        <testsuite name="unit">
+            <directory>tests/unit</directory>
+        </testsuite>
+
+        <testsuite name="end-to-end">
+            <directory suffix=".phpt">tests/end-to-end</directory>
+            <exclude>tests/end-to-end/_files</exclude>
         </testsuite>
     </testsuites>
 
-    <coverage cacheDirectory=".phpunit.cache/code-coverage" processUncoveredFiles="true">
+    <coverage ignoreDeprecatedCodeUnits="true">
         <include>
             <directory suffix=".php">src</directory>
         </include>
-<!--        <report>-->
-<!--            <html outputDirectory="coverage" lowUpperBound="50" highLowerBound="90"/>-->
-<!--            <crap4j outputFile="build/logs/crap4j.xml"/>-->
-<!--            <clover outputFile="build/logs/clover.xml"/>-->
-<!--        </report>-->
+
+        <exclude>
+            <file>src/Framework/Assert/Functions.php</file>
+            <file>src/Util/PHP/eval-stdin.php</file>
+        </exclude>
     </coverage>
-<!--    <logging>-->
-<!--        <junit outputFile="build/logs/junit.xml"/>-->
-<!--    </logging>-->
-    </phpunit>
+
+    <php>
+        <ini name="precision" value="14"/>
+        <ini name="serialize_precision" value="14"/>
+
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+</phpunit>

@@ -22,13 +22,13 @@
         <include>
             <directory suffix=".php">src</directory>
         </include>
-        <report>
-            <html outputDirectory="coverage" lowUpperBound="50" highLowerBound="90"/>
-            <crap4j outputFile="build/logs/crap4j.xml"/>
-            <clover outputFile="build/logs/clover.xml"/>
-        </report>
+<!--        <report>-->
+<!--            <html outputDirectory="coverage" lowUpperBound="50" highLowerBound="90"/>-->
+<!--            <crap4j outputFile="build/logs/crap4j.xml"/>-->
+<!--            <clover outputFile="build/logs/clover.xml"/>-->
+<!--        </report>-->
     </coverage>
-    <logging>
-        <junit outputFile="build/logs/junit.xml"/>
-    </logging>
+<!--    <logging>-->
+<!--        <junit outputFile="build/logs/junit.xml"/>-->
+<!--    </logging>-->
     </phpunit>

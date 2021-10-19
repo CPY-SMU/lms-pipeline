@@ -32,10 +32,6 @@
             <fileset dir="${basedir}/src">
                 <include name="**/*.php" />
             </fileset>
-
-            <fileset dir="${basedir}/tests">
-                <include name="**/*.php" />
-            </fileset>
         </apply>
     </target>
 
